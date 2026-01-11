@@ -1,0 +1,27 @@
+#cloud-config
+
+# 1. Définit le hostname de la machine
+hostname: ${hostname}
+
+# 2. Met à jour la liste des packages et fait les mises à jour
+package_update: true
+package_upgrade: true
+
+# 3. Installe automatiquement ces packages
+packages:
+  - nginx       # Serveur web
+  - htop        # Monitoring système
+  - wget        # Téléchargement de fichiers
+  - curl        # Requêtes HTTP
+
+# 4. Exécute ces commandes dans l'ordre
+runcmd:
+  - systemctl enable nginx                    # Active nginx au démarrage
+  - systemctl start nginx                     # Démarre nginx maintenant
+  - echo "<h1>Hello from OCI!</h1>" > /usr/share/nginx/html/index.html  # Page d'accueil
+  - firewall-cmd --permanent --add-service=http   # Ouvre le port 80
+  - firewall-cmd --permanent --add-service=https  # Ouvre le port 443
+  - firewall-cmd --reload                     # Recharge le firewall
+
+# 5. Message de fin
+final_message: "Instance configuration complete after $UPTIME seconds"

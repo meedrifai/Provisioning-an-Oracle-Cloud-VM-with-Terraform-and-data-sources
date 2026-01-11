@@ -1,0 +1,627 @@
+nohup: ignoring input
+🚀 Retry automatique Terraform OCI
+Tentatives max: 100
+Intervalle: 1 minute
+
+📍 [18:38:23] Tentative 1/100
+[0m[1mdata.oci_identity_tenancy.current: Reading...[0m[0m
+[0m[1mdata.oci_identity_availability_domains.ads: Reading...[0m[0m
+[0m[1mdata.oci_core_images.oracle_linux: Reading...[0m[0m
+[0m[1mmodule.network.oci_core_virtual_network.main_vcn: Refreshing state... [id=ocid1.vcn.oc1.eu-paris-1.amaaaaaanvgyooiauyd2notpainfyygdm2lapqbgx5t7by2ix2bg4pmtqb2a][0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Reading...[0m[0m
+[0m[1mdata.oci_identity_availability_domains.ads: Read complete after 1s [id=IdentityAvailabilityDomainsDataSource-3920739484][0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Read complete after 1s [id=CoreServicesDataSource-0][0m
+[0m[1mdata.oci_identity_tenancy.current: Read complete after 1s [id=ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza][0m
+[0m[1mdata.oci_core_images.oracle_linux: Read complete after 1s [id=CoreImagesDataSource-1277818673][0m
+[0m[1mmodule.network.oci_core_internet_gateway.igw: Refreshing state... [id=ocid1.internetgateway.oc1.eu-paris-1.aaaaaaaaopgtpkxpsfe2czreamj3k3jx2gfzjzckcfuqtd3nk5hlphr5i4ia][0m
+[0m[1mmodule.security.oci_core_network_security_group.web_nsg: Refreshing state... [id=ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra][0m
+[0m[1mmodule.network.oci_core_nat_gateway.nat_gw: Refreshing state... [id=ocid1.natgateway.oc1.eu-paris-1.aaaaaaaahugtddegj2incyaob2fbnkeoqaafwurotfthfrst3uuhnatwkgpq][0m
+[0m[1mmodule.network.oci_core_service_gateway.service_gw: Refreshing state... [id=ocid1.servicegateway.oc1.eu-paris-1.aaaaaaaahvjyzfll6o7jcpkeipg6xsjg7b53r7a7l5hixnxiebt35eqbmb5a][0m
+[0m[1mmodule.security.oci_core_security_list.public_security_list: Refreshing state... [id=ocid1.securitylist.oc1.eu-paris-1.aaaaaaaap77r5j6hgbr27mcbnkkxu5gckqgtjaj42srepnd7hoesi4ugsrmq][0m
+[0m[1mmodule.network.oci_core_route_table.public_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaaf2uocx5omi4pljtfc4jsvy2rfbjjvkx42ghd5nbmqvnnonuqt5ha][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_https: Refreshing state... [id=52FB8B][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_egress: Refreshing state... [id=0CD0E8][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_http: Refreshing state... [id=69399B][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_ssh: Refreshing state... [id=177E38][0m
+[0m[1mmodule.network.oci_core_subnet.public_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq][0m
+[0m[1mmodule.network.oci_core_route_table.private_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaalgplclufopjcmy455necasc4zhw3a6pts2vmsfnxrix57pbf55na][0m
+[0m[1mmodule.network.oci_core_subnet.private_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaaulmr3fns47ngbl6hgxdxf4ixmpfuch2uvtcutp5vwqmomff6fxya][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.compute.oci_core_instance.web_instance[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_instance" "web_instance" {
+      [32m+[0m[0m availability_domain                 = "uFVI:EU-PARIS-1-AD-1"
+      [32m+[0m[0m boot_volume_id                      = (known after apply)
+      [32m+[0m[0m capacity_reservation_id             = (known after apply)
+      [32m+[0m[0m compartment_id                      = "ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza"
+      [32m+[0m[0m compute_cluster_id                  = (known after apply)
+      [32m+[0m[0m dedicated_vm_host_id                = (known after apply)
+      [32m+[0m[0m defined_tags                        = (known after apply)
+      [32m+[0m[0m display_name                        = "WebInstance"
+      [32m+[0m[0m extended_metadata                   = (known after apply)
+      [32m+[0m[0m fault_domain                        = (known after apply)
+      [32m+[0m[0m freeform_tags                       = (known after apply)
+      [32m+[0m[0m hostname_label                      = (known after apply)
+      [32m+[0m[0m id                                  = (known after apply)
+      [32m+[0m[0m image                               = (known after apply)
+      [32m+[0m[0m instance_configuration_id           = (known after apply)
+      [32m+[0m[0m ipxe_script                         = (known after apply)
+      [32m+[0m[0m is_cross_numa_node                  = (known after apply)
+      [32m+[0m[0m is_pv_encryption_in_transit_enabled = (known after apply)
+      [32m+[0m[0m launch_mode                         = (known after apply)
+      [32m+[0m[0m metadata                            = {
+          [32m+[0m[0m "ssh_authorized_keys" = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWEqDLsDwAjJFs0JZbNQO27n+1+WOPaxdjTtmTLCQwVPgi0naPQl4J6hB9lbQBpcYCqKZ0wLBhwYFgpgAUwu35Qp7XSx1wHCCpw7UoJQBP65MPzi3EVnzz21KRa2oNJAT1e3mgPv6kg3+1a84iYKYp0V+1z7GGPQaysXxcRgYB+1T8rxDgfO9MynqKKlZ1/lpgVRSLdmGeq79wKF2ENUadig4LHxSyteXa73JHos+vbnZNh9rfJuVBpIT7z0mKgSuwyUoERCAeoL2HBv1jri7aijbEP15d6ut5X3cM3N5aUYnZL/GT1ynCI7ezd7MiCpeyR49vISyf4QzeiuDN0+7H7HRIXMnj3qL//x4eKRUu0JU/TnBJyqK9oa4h9zBDn8TLdmyCOtBUCbWDcPMBUBz7Y8ewhMHVjW0VpPU2fkcSKIVyTeK52kuK0464DiOE/ZjofCf7g0oE9nEwKY0N5kHT9KbSenhkEBVcBvi98P0iq8y6+12Fud8h2dlIuHDwtG1uLPN9Cb9Aw4wX8qyAEb2BlFdsCJ+kW14ensTwFwe5ULGbpyMRubG505llvkt1ffsBuBNSyRCsNO2WpCn/qaUIrj9FV0+TAhNqXmzmbS+QO5pOAUHM+e3rin5PzxjQVvs5ZYiFh9QpTyFxeutE+1MVCeIZFu6ATvofHTSxkCpOyQ== pc@DESKTOP-87BPDNH
+            EOT
+          [32m+[0m[0m "user_data"           = "I2Nsb3VkLWNvbmZpZwoKIyAxLiBEw6lmaW5pdCBsZSBob3N0bmFtZSBkZSBsYSBtYWNoaW5lCmhvc3RuYW1lOiB3ZWJpbnN0YW5jZQoKIyAyLiBNZXQgw6Agam91ciBsYSBsaXN0ZSBkZXMgcGFja2FnZXMgZXQgZmFpdCBsZXMgbWlzZXMgw6Agam91cgpwYWNrYWdlX3VwZGF0ZTogdHJ1ZQpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKCiMgMy4gSW5zdGFsbGUgYXV0b21hdGlxdWVtZW50IGNlcyBwYWNrYWdlcwpwYWNrYWdlczoKICAtIG5naW54ICAgICAgICMgU2VydmV1ciB3ZWIKICAtIGh0b3AgICAgICAgICMgTW9uaXRvcmluZyBzeXN0w6htZQogIC0gd2dldCAgICAgICAgIyBUw6lsw6ljaGFyZ2VtZW50IGRlIGZpY2hpZXJzCiAgLSBjdXJsICAgICAgICAjIFJlcXXDqnRlcyBIVFRQCgojIDQuIEV4w6ljdXRlIGNlcyBjb21tYW5kZXMgZGFucyBsJ29yZHJlCnJ1bmNtZDoKICAtIHN5c3RlbWN0bCBlbmFibGUgbmdpbnggICAgICAgICAgICAgICAgICAgICMgQWN0aXZlIG5naW54IGF1IGTDqW1hcnJhZ2UKICAtIHN5c3RlbWN0bCBzdGFydCBuZ2lueCAgICAgICAgICAgICAgICAgICAgICMgRMOpbWFycmUgbmdpbnggbWFpbnRlbmFudAogIC0gZWNobyAiPGgxPkhlbGxvIGZyb20gT0NJITwvaDE+IiA+IC91c3Ivc2hhcmUvbmdpbngvaHRtbC9pbmRleC5odG1sICAjIFBhZ2UgZCdhY2N1ZWlsCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwICAgIyBPdXZyZSBsZSBwb3J0IDgwCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwcyAgIyBPdXZyZSBsZSBwb3J0IDQ0MwogIC0gZmlyZXdhbGwtY21kIC0tcmVsb2FkICAgICAgICAgICAgICAgICAgICAgIyBSZWNoYXJnZSBsZSBmaXJld2FsbAoKIyA1LiBNZXNzYWdlIGRlIGZpbgpmaW5hbF9tZXNzYWdlOiAiSW5zdGFuY2UgY29uZmlndXJhdGlvbiBjb21wbGV0ZSBhZnRlciAkVVBUSU1FIHNlY29uZHMiCg=="
+        }
+      [32m+[0m[0m preserve_boot_volume                = false
+      [32m+[0m[0m private_ip                          = (known after apply)
+      [32m+[0m[0m public_ip                           = (known after apply)
+      [32m+[0m[0m region                              = (known after apply)
+      [32m+[0m[0m shape                               = "VM.Standard.A1.Flex"
+      [32m+[0m[0m state                               = (known after apply)
+      [32m+[0m[0m subnet_id                           = (known after apply)
+      [32m+[0m[0m system_tags                         = (known after apply)
+      [32m+[0m[0m time_created                        = (known after apply)
+      [32m+[0m[0m time_maintenance_reboot_due         = (known after apply)
+
+      [32m+[0m[0m agent_config (known after apply)
+
+      [32m+[0m[0m availability_config (known after apply)
+
+      [32m+[0m[0m create_vnic_details {
+          [32m+[0m[0m assign_ipv6ip          = (known after apply)
+          [32m+[0m[0m assign_public_ip       = "true"
+          [32m+[0m[0m defined_tags           = (known after apply)
+          [32m+[0m[0m display_name           = "WebInstanceVNIC"
+          [32m+[0m[0m freeform_tags          = (known after apply)
+          [32m+[0m[0m hostname_label         = "webinstance"
+          [32m+[0m[0m nsg_ids                = [
+              [32m+[0m[0m "ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra",
+            ]
+          [32m+[0m[0m private_ip             = (known after apply)
+          [32m+[0m[0m skip_source_dest_check = (known after apply)
+          [32m+[0m[0m subnet_id              = "ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq"
+          [32m+[0m[0m vlan_id                = (known after apply)
+
+          [32m+[0m[0m ipv6address_ipv6subnet_cidr_pair_details (known after apply)
+        }
+
+      [32m+[0m[0m instance_options (known after apply)
+
+      [32m+[0m[0m launch_options (known after apply)
+
+      [32m+[0m[0m launch_volume_attachments (known after apply)
+
+      [32m+[0m[0m platform_config (known after apply)
+
+      [32m+[0m[0m preemptible_instance_config (known after apply)
+
+      [32m+[0m[0m shape_config {
+          [32m+[0m[0m baseline_ocpu_utilization     = (known after apply)
+          [32m+[0m[0m gpu_description               = (known after apply)
+          [32m+[0m[0m gpus                          = (known after apply)
+          [32m+[0m[0m local_disk_description        = (known after apply)
+          [32m+[0m[0m local_disks                   = (known after apply)
+          [32m+[0m[0m local_disks_total_size_in_gbs = (known after apply)
+          [32m+[0m[0m max_vnic_attachments          = (known after apply)
+          [32m+[0m[0m memory_in_gbs                 = 12
+          [32m+[0m[0m networking_bandwidth_in_gbps  = (known after apply)
+          [32m+[0m[0m nvmes                         = (known after apply)
+          [32m+[0m[0m ocpus                         = 2
+          [32m+[0m[0m processor_description         = (known after apply)
+          [32m+[0m[0m vcpus                         = (known after apply)
+        }
+
+      [32m+[0m[0m source_details {
+          [32m+[0m[0m boot_volume_size_in_gbs = (known after apply)
+          [32m+[0m[0m boot_volume_vpus_per_gb = (known after apply)
+          [32m+[0m[0m source_id               = "ocid1.image.oc1.eu-paris-1.aaaaaaaahjteglsxr4odpbvt43tbxcd5uajxmkqvx6t4mak2b4p65zsufy6q"
+          [32m+[0m[0m source_type             = "image"
+
+          [32m+[0m[0m instance_source_image_filter_details (known after apply)
+        }
+    }
+
+[1mPlan:[0m [0m1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m instance_id              = (known after apply)
+  [32m+[0m[0m instance_private_ip      = (known after apply)
+  [32m+[0m[0m instance_public_ip       = (known after apply)
+[0m[1mmodule.compute.oci_core_instance.web_instance: Creating...[0m[0m
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1m500-InternalError, Out of host capacity.
+[31m│[0m [0mSuggestion: The service for this resource encountered an error. Please contact support for help with service: Core Instance
+[31m│[0m [0mDocumentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance 
+[31m│[0m [0mAPI Reference: https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Instance/LaunchInstance 
+[31m│[0m [0mRequest Target: POST https://iaas.eu-paris-1.oraclecloud.com/20160918/instances 
+[31m│[0m [0mProvider version: 5.47.0, released on 2024-06-19. This provider is 81 Update(s) behind to current. 
+[31m│[0m [0mService: Core Instance 
+[31m│[0m [0mOperation Name: LaunchInstance 
+[31m│[0m [0mOPC request ID: 6f53c23b76ad62ed345f2b7dfb5d0d1c/8C278171D3C63D4C18E06369434447C3/CDA5C3D3473D603D71DD4D736B9A63F5 
+[31m│[0m [0m[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with module.compute.oci_core_instance.web_instance,
+[31m│[0m [0m  on compute/instance.tf line 1, in resource "oci_core_instance" "web_instance":
+[31m│[0m [0m   1: resource "oci_core_instance" "web_instance" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
+⚠️  Échec - Retry dans 1 min...
+
+📍 [18:39:33] Tentative 2/100
+[0m[1mdata.oci_identity_tenancy.current: Reading...[0m[0m
+[0m[1mdata.oci_identity_availability_domains.ads: Reading...[0m[0m
+[0m[1mdata.oci_core_images.oracle_linux: Reading...[0m[0m
+[0m[1mmodule.network.oci_core_virtual_network.main_vcn: Refreshing state... [id=ocid1.vcn.oc1.eu-paris-1.amaaaaaanvgyooiauyd2notpainfyygdm2lapqbgx5t7by2ix2bg4pmtqb2a][0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Reading...[0m[0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Read complete after 1s [id=CoreServicesDataSource-0][0m
+[0m[1mdata.oci_identity_tenancy.current: Read complete after 1s [id=ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza][0m
+[0m[1mmodule.network.oci_core_internet_gateway.igw: Refreshing state... [id=ocid1.internetgateway.oc1.eu-paris-1.aaaaaaaaopgtpkxpsfe2czreamj3k3jx2gfzjzckcfuqtd3nk5hlphr5i4ia][0m
+[0m[1mmodule.network.oci_core_nat_gateway.nat_gw: Refreshing state... [id=ocid1.natgateway.oc1.eu-paris-1.aaaaaaaahugtddegj2incyaob2fbnkeoqaafwurotfthfrst3uuhnatwkgpq][0m
+[0m[1mmodule.network.oci_core_service_gateway.service_gw: Refreshing state... [id=ocid1.servicegateway.oc1.eu-paris-1.aaaaaaaahvjyzfll6o7jcpkeipg6xsjg7b53r7a7l5hixnxiebt35eqbmb5a][0m
+[0m[1mmodule.security.oci_core_network_security_group.web_nsg: Refreshing state... [id=ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra][0m
+[0m[1mdata.oci_identity_availability_domains.ads: Read complete after 1s [id=IdentityAvailabilityDomainsDataSource-3920739484][0m
+[0m[1mmodule.security.oci_core_security_list.public_security_list: Refreshing state... [id=ocid1.securitylist.oc1.eu-paris-1.aaaaaaaap77r5j6hgbr27mcbnkkxu5gckqgtjaj42srepnd7hoesi4ugsrmq][0m
+[0m[1mdata.oci_core_images.oracle_linux: Read complete after 1s [id=CoreImagesDataSource-1277818673][0m
+[0m[1mmodule.network.oci_core_route_table.public_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaaf2uocx5omi4pljtfc4jsvy2rfbjjvkx42ghd5nbmqvnnonuqt5ha][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_https: Refreshing state... [id=52FB8B][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_ssh: Refreshing state... [id=177E38][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_http: Refreshing state... [id=69399B][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_egress: Refreshing state... [id=0CD0E8][0m
+[0m[1mmodule.network.oci_core_subnet.public_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq][0m
+[0m[1mmodule.network.oci_core_route_table.private_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaalgplclufopjcmy455necasc4zhw3a6pts2vmsfnxrix57pbf55na][0m
+[0m[1mmodule.network.oci_core_subnet.private_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaaulmr3fns47ngbl6hgxdxf4ixmpfuch2uvtcutp5vwqmomff6fxya][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.compute.oci_core_instance.web_instance[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_instance" "web_instance" {
+      [32m+[0m[0m availability_domain                 = "uFVI:EU-PARIS-1-AD-1"
+      [32m+[0m[0m boot_volume_id                      = (known after apply)
+      [32m+[0m[0m capacity_reservation_id             = (known after apply)
+      [32m+[0m[0m compartment_id                      = "ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza"
+      [32m+[0m[0m compute_cluster_id                  = (known after apply)
+      [32m+[0m[0m dedicated_vm_host_id                = (known after apply)
+      [32m+[0m[0m defined_tags                        = (known after apply)
+      [32m+[0m[0m display_name                        = "WebInstance"
+      [32m+[0m[0m extended_metadata                   = (known after apply)
+      [32m+[0m[0m fault_domain                        = (known after apply)
+      [32m+[0m[0m freeform_tags                       = (known after apply)
+      [32m+[0m[0m hostname_label                      = (known after apply)
+      [32m+[0m[0m id                                  = (known after apply)
+      [32m+[0m[0m image                               = (known after apply)
+      [32m+[0m[0m instance_configuration_id           = (known after apply)
+      [32m+[0m[0m ipxe_script                         = (known after apply)
+      [32m+[0m[0m is_cross_numa_node                  = (known after apply)
+      [32m+[0m[0m is_pv_encryption_in_transit_enabled = (known after apply)
+      [32m+[0m[0m launch_mode                         = (known after apply)
+      [32m+[0m[0m metadata                            = {
+          [32m+[0m[0m "ssh_authorized_keys" = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWEqDLsDwAjJFs0JZbNQO27n+1+WOPaxdjTtmTLCQwVPgi0naPQl4J6hB9lbQBpcYCqKZ0wLBhwYFgpgAUwu35Qp7XSx1wHCCpw7UoJQBP65MPzi3EVnzz21KRa2oNJAT1e3mgPv6kg3+1a84iYKYp0V+1z7GGPQaysXxcRgYB+1T8rxDgfO9MynqKKlZ1/lpgVRSLdmGeq79wKF2ENUadig4LHxSyteXa73JHos+vbnZNh9rfJuVBpIT7z0mKgSuwyUoERCAeoL2HBv1jri7aijbEP15d6ut5X3cM3N5aUYnZL/GT1ynCI7ezd7MiCpeyR49vISyf4QzeiuDN0+7H7HRIXMnj3qL//x4eKRUu0JU/TnBJyqK9oa4h9zBDn8TLdmyCOtBUCbWDcPMBUBz7Y8ewhMHVjW0VpPU2fkcSKIVyTeK52kuK0464DiOE/ZjofCf7g0oE9nEwKY0N5kHT9KbSenhkEBVcBvi98P0iq8y6+12Fud8h2dlIuHDwtG1uLPN9Cb9Aw4wX8qyAEb2BlFdsCJ+kW14ensTwFwe5ULGbpyMRubG505llvkt1ffsBuBNSyRCsNO2WpCn/qaUIrj9FV0+TAhNqXmzmbS+QO5pOAUHM+e3rin5PzxjQVvs5ZYiFh9QpTyFxeutE+1MVCeIZFu6ATvofHTSxkCpOyQ== pc@DESKTOP-87BPDNH
+            EOT
+          [32m+[0m[0m "user_data"           = "I2Nsb3VkLWNvbmZpZwoKIyAxLiBEw6lmaW5pdCBsZSBob3N0bmFtZSBkZSBsYSBtYWNoaW5lCmhvc3RuYW1lOiB3ZWJpbnN0YW5jZQoKIyAyLiBNZXQgw6Agam91ciBsYSBsaXN0ZSBkZXMgcGFja2FnZXMgZXQgZmFpdCBsZXMgbWlzZXMgw6Agam91cgpwYWNrYWdlX3VwZGF0ZTogdHJ1ZQpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKCiMgMy4gSW5zdGFsbGUgYXV0b21hdGlxdWVtZW50IGNlcyBwYWNrYWdlcwpwYWNrYWdlczoKICAtIG5naW54ICAgICAgICMgU2VydmV1ciB3ZWIKICAtIGh0b3AgICAgICAgICMgTW9uaXRvcmluZyBzeXN0w6htZQogIC0gd2dldCAgICAgICAgIyBUw6lsw6ljaGFyZ2VtZW50IGRlIGZpY2hpZXJzCiAgLSBjdXJsICAgICAgICAjIFJlcXXDqnRlcyBIVFRQCgojIDQuIEV4w6ljdXRlIGNlcyBjb21tYW5kZXMgZGFucyBsJ29yZHJlCnJ1bmNtZDoKICAtIHN5c3RlbWN0bCBlbmFibGUgbmdpbnggICAgICAgICAgICAgICAgICAgICMgQWN0aXZlIG5naW54IGF1IGTDqW1hcnJhZ2UKICAtIHN5c3RlbWN0bCBzdGFydCBuZ2lueCAgICAgICAgICAgICAgICAgICAgICMgRMOpbWFycmUgbmdpbnggbWFpbnRlbmFudAogIC0gZWNobyAiPGgxPkhlbGxvIGZyb20gT0NJITwvaDE+IiA+IC91c3Ivc2hhcmUvbmdpbngvaHRtbC9pbmRleC5odG1sICAjIFBhZ2UgZCdhY2N1ZWlsCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwICAgIyBPdXZyZSBsZSBwb3J0IDgwCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwcyAgIyBPdXZyZSBsZSBwb3J0IDQ0MwogIC0gZmlyZXdhbGwtY21kIC0tcmVsb2FkICAgICAgICAgICAgICAgICAgICAgIyBSZWNoYXJnZSBsZSBmaXJld2FsbAoKIyA1LiBNZXNzYWdlIGRlIGZpbgpmaW5hbF9tZXNzYWdlOiAiSW5zdGFuY2UgY29uZmlndXJhdGlvbiBjb21wbGV0ZSBhZnRlciAkVVBUSU1FIHNlY29uZHMiCg=="
+        }
+      [32m+[0m[0m preserve_boot_volume                = false
+      [32m+[0m[0m private_ip                          = (known after apply)
+      [32m+[0m[0m public_ip                           = (known after apply)
+      [32m+[0m[0m region                              = (known after apply)
+      [32m+[0m[0m shape                               = "VM.Standard.A1.Flex"
+      [32m+[0m[0m state                               = (known after apply)
+      [32m+[0m[0m subnet_id                           = (known after apply)
+      [32m+[0m[0m system_tags                         = (known after apply)
+      [32m+[0m[0m time_created                        = (known after apply)
+      [32m+[0m[0m time_maintenance_reboot_due         = (known after apply)
+
+      [32m+[0m[0m agent_config (known after apply)
+
+      [32m+[0m[0m availability_config (known after apply)
+
+      [32m+[0m[0m create_vnic_details {
+          [32m+[0m[0m assign_ipv6ip          = (known after apply)
+          [32m+[0m[0m assign_public_ip       = "true"
+          [32m+[0m[0m defined_tags           = (known after apply)
+          [32m+[0m[0m display_name           = "WebInstanceVNIC"
+          [32m+[0m[0m freeform_tags          = (known after apply)
+          [32m+[0m[0m hostname_label         = "webinstance"
+          [32m+[0m[0m nsg_ids                = [
+              [32m+[0m[0m "ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra",
+            ]
+          [32m+[0m[0m private_ip             = (known after apply)
+          [32m+[0m[0m skip_source_dest_check = (known after apply)
+          [32m+[0m[0m subnet_id              = "ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq"
+          [32m+[0m[0m vlan_id                = (known after apply)
+
+          [32m+[0m[0m ipv6address_ipv6subnet_cidr_pair_details (known after apply)
+        }
+
+      [32m+[0m[0m instance_options (known after apply)
+
+      [32m+[0m[0m launch_options (known after apply)
+
+      [32m+[0m[0m launch_volume_attachments (known after apply)
+
+      [32m+[0m[0m platform_config (known after apply)
+
+      [32m+[0m[0m preemptible_instance_config (known after apply)
+
+      [32m+[0m[0m shape_config {
+          [32m+[0m[0m baseline_ocpu_utilization     = (known after apply)
+          [32m+[0m[0m gpu_description               = (known after apply)
+          [32m+[0m[0m gpus                          = (known after apply)
+          [32m+[0m[0m local_disk_description        = (known after apply)
+          [32m+[0m[0m local_disks                   = (known after apply)
+          [32m+[0m[0m local_disks_total_size_in_gbs = (known after apply)
+          [32m+[0m[0m max_vnic_attachments          = (known after apply)
+          [32m+[0m[0m memory_in_gbs                 = 12
+          [32m+[0m[0m networking_bandwidth_in_gbps  = (known after apply)
+          [32m+[0m[0m nvmes                         = (known after apply)
+          [32m+[0m[0m ocpus                         = 2
+          [32m+[0m[0m processor_description         = (known after apply)
+          [32m+[0m[0m vcpus                         = (known after apply)
+        }
+
+      [32m+[0m[0m source_details {
+          [32m+[0m[0m boot_volume_size_in_gbs = (known after apply)
+          [32m+[0m[0m boot_volume_vpus_per_gb = (known after apply)
+          [32m+[0m[0m source_id               = "ocid1.image.oc1.eu-paris-1.aaaaaaaahjteglsxr4odpbvt43tbxcd5uajxmkqvx6t4mak2b4p65zsufy6q"
+          [32m+[0m[0m source_type             = "image"
+
+          [32m+[0m[0m instance_source_image_filter_details (known after apply)
+        }
+    }
+
+[1mPlan:[0m [0m1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m instance_id              = (known after apply)
+  [32m+[0m[0m instance_private_ip      = (known after apply)
+  [32m+[0m[0m instance_public_ip       = (known after apply)
+[0m[1mmodule.compute.oci_core_instance.web_instance: Creating...[0m[0m
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1m500-InternalError, Out of host capacity.
+[31m│[0m [0mSuggestion: The service for this resource encountered an error. Please contact support for help with service: Core Instance
+[31m│[0m [0mDocumentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance 
+[31m│[0m [0mAPI Reference: https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Instance/LaunchInstance 
+[31m│[0m [0mRequest Target: POST https://iaas.eu-paris-1.oraclecloud.com/20160918/instances 
+[31m│[0m [0mProvider version: 5.47.0, released on 2024-06-19. This provider is 81 Update(s) behind to current. 
+[31m│[0m [0mService: Core Instance 
+[31m│[0m [0mOperation Name: LaunchInstance 
+[31m│[0m [0mOPC request ID: 052dacef0c0bf1890d3c0f0d9ea6a9c9/F1C6BA6B00262D745EE06369434447F1/7ADFED2E07A4219CA442F235B9062804 
+[31m│[0m [0m[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with module.compute.oci_core_instance.web_instance,
+[31m│[0m [0m  on compute/instance.tf line 1, in resource "oci_core_instance" "web_instance":
+[31m│[0m [0m   1: resource "oci_core_instance" "web_instance" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
+⚠️  Échec - Retry dans 1 min...
+
+📍 [18:40:43] Tentative 3/100
+[0m[1mdata.oci_identity_availability_domains.ads: Reading...[0m[0m
+[0m[1mdata.oci_core_images.oracle_linux: Reading...[0m[0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Reading...[0m[0m
+[0m[1mdata.oci_identity_tenancy.current: Reading...[0m[0m
+[0m[1mmodule.network.oci_core_virtual_network.main_vcn: Refreshing state... [id=ocid1.vcn.oc1.eu-paris-1.amaaaaaanvgyooiauyd2notpainfyygdm2lapqbgx5t7by2ix2bg4pmtqb2a][0m
+[0m[1mdata.oci_identity_availability_domains.ads: Read complete after 0s [id=IdentityAvailabilityDomainsDataSource-3920739484][0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Read complete after 0s [id=CoreServicesDataSource-0][0m
+[0m[1mdata.oci_core_images.oracle_linux: Read complete after 0s [id=CoreImagesDataSource-1277818673][0m
+[0m[1mdata.oci_identity_tenancy.current: Read complete after 0s [id=ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza][0m
+[0m[1mmodule.network.oci_core_nat_gateway.nat_gw: Refreshing state... [id=ocid1.natgateway.oc1.eu-paris-1.aaaaaaaahugtddegj2incyaob2fbnkeoqaafwurotfthfrst3uuhnatwkgpq][0m
+[0m[1mmodule.network.oci_core_internet_gateway.igw: Refreshing state... [id=ocid1.internetgateway.oc1.eu-paris-1.aaaaaaaaopgtpkxpsfe2czreamj3k3jx2gfzjzckcfuqtd3nk5hlphr5i4ia][0m
+[0m[1mmodule.network.oci_core_service_gateway.service_gw: Refreshing state... [id=ocid1.servicegateway.oc1.eu-paris-1.aaaaaaaahvjyzfll6o7jcpkeipg6xsjg7b53r7a7l5hixnxiebt35eqbmb5a][0m
+[0m[1mmodule.security.oci_core_network_security_group.web_nsg: Refreshing state... [id=ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra][0m
+[0m[1mmodule.security.oci_core_security_list.public_security_list: Refreshing state... [id=ocid1.securitylist.oc1.eu-paris-1.aaaaaaaap77r5j6hgbr27mcbnkkxu5gckqgtjaj42srepnd7hoesi4ugsrmq][0m
+[0m[1mmodule.network.oci_core_route_table.public_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaaf2uocx5omi4pljtfc4jsvy2rfbjjvkx42ghd5nbmqvnnonuqt5ha][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_egress: Refreshing state... [id=0CD0E8][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_http: Refreshing state... [id=69399B][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_ssh: Refreshing state... [id=177E38][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_https: Refreshing state... [id=52FB8B][0m
+[0m[1mmodule.network.oci_core_subnet.public_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq][0m
+[0m[1mmodule.network.oci_core_route_table.private_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaalgplclufopjcmy455necasc4zhw3a6pts2vmsfnxrix57pbf55na][0m
+[0m[1mmodule.network.oci_core_subnet.private_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaaulmr3fns47ngbl6hgxdxf4ixmpfuch2uvtcutp5vwqmomff6fxya][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.compute.oci_core_instance.web_instance[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_instance" "web_instance" {
+      [32m+[0m[0m availability_domain                 = "uFVI:EU-PARIS-1-AD-1"
+      [32m+[0m[0m boot_volume_id                      = (known after apply)
+      [32m+[0m[0m capacity_reservation_id             = (known after apply)
+      [32m+[0m[0m compartment_id                      = "ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza"
+      [32m+[0m[0m compute_cluster_id                  = (known after apply)
+      [32m+[0m[0m dedicated_vm_host_id                = (known after apply)
+      [32m+[0m[0m defined_tags                        = (known after apply)
+      [32m+[0m[0m display_name                        = "WebInstance"
+      [32m+[0m[0m extended_metadata                   = (known after apply)
+      [32m+[0m[0m fault_domain                        = (known after apply)
+      [32m+[0m[0m freeform_tags                       = (known after apply)
+      [32m+[0m[0m hostname_label                      = (known after apply)
+      [32m+[0m[0m id                                  = (known after apply)
+      [32m+[0m[0m image                               = (known after apply)
+      [32m+[0m[0m instance_configuration_id           = (known after apply)
+      [32m+[0m[0m ipxe_script                         = (known after apply)
+      [32m+[0m[0m is_cross_numa_node                  = (known after apply)
+      [32m+[0m[0m is_pv_encryption_in_transit_enabled = (known after apply)
+      [32m+[0m[0m launch_mode                         = (known after apply)
+      [32m+[0m[0m metadata                            = {
+          [32m+[0m[0m "ssh_authorized_keys" = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWEqDLsDwAjJFs0JZbNQO27n+1+WOPaxdjTtmTLCQwVPgi0naPQl4J6hB9lbQBpcYCqKZ0wLBhwYFgpgAUwu35Qp7XSx1wHCCpw7UoJQBP65MPzi3EVnzz21KRa2oNJAT1e3mgPv6kg3+1a84iYKYp0V+1z7GGPQaysXxcRgYB+1T8rxDgfO9MynqKKlZ1/lpgVRSLdmGeq79wKF2ENUadig4LHxSyteXa73JHos+vbnZNh9rfJuVBpIT7z0mKgSuwyUoERCAeoL2HBv1jri7aijbEP15d6ut5X3cM3N5aUYnZL/GT1ynCI7ezd7MiCpeyR49vISyf4QzeiuDN0+7H7HRIXMnj3qL//x4eKRUu0JU/TnBJyqK9oa4h9zBDn8TLdmyCOtBUCbWDcPMBUBz7Y8ewhMHVjW0VpPU2fkcSKIVyTeK52kuK0464DiOE/ZjofCf7g0oE9nEwKY0N5kHT9KbSenhkEBVcBvi98P0iq8y6+12Fud8h2dlIuHDwtG1uLPN9Cb9Aw4wX8qyAEb2BlFdsCJ+kW14ensTwFwe5ULGbpyMRubG505llvkt1ffsBuBNSyRCsNO2WpCn/qaUIrj9FV0+TAhNqXmzmbS+QO5pOAUHM+e3rin5PzxjQVvs5ZYiFh9QpTyFxeutE+1MVCeIZFu6ATvofHTSxkCpOyQ== pc@DESKTOP-87BPDNH
+            EOT
+          [32m+[0m[0m "user_data"           = "I2Nsb3VkLWNvbmZpZwoKIyAxLiBEw6lmaW5pdCBsZSBob3N0bmFtZSBkZSBsYSBtYWNoaW5lCmhvc3RuYW1lOiB3ZWJpbnN0YW5jZQoKIyAyLiBNZXQgw6Agam91ciBsYSBsaXN0ZSBkZXMgcGFja2FnZXMgZXQgZmFpdCBsZXMgbWlzZXMgw6Agam91cgpwYWNrYWdlX3VwZGF0ZTogdHJ1ZQpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKCiMgMy4gSW5zdGFsbGUgYXV0b21hdGlxdWVtZW50IGNlcyBwYWNrYWdlcwpwYWNrYWdlczoKICAtIG5naW54ICAgICAgICMgU2VydmV1ciB3ZWIKICAtIGh0b3AgICAgICAgICMgTW9uaXRvcmluZyBzeXN0w6htZQogIC0gd2dldCAgICAgICAgIyBUw6lsw6ljaGFyZ2VtZW50IGRlIGZpY2hpZXJzCiAgLSBjdXJsICAgICAgICAjIFJlcXXDqnRlcyBIVFRQCgojIDQuIEV4w6ljdXRlIGNlcyBjb21tYW5kZXMgZGFucyBsJ29yZHJlCnJ1bmNtZDoKICAtIHN5c3RlbWN0bCBlbmFibGUgbmdpbnggICAgICAgICAgICAgICAgICAgICMgQWN0aXZlIG5naW54IGF1IGTDqW1hcnJhZ2UKICAtIHN5c3RlbWN0bCBzdGFydCBuZ2lueCAgICAgICAgICAgICAgICAgICAgICMgRMOpbWFycmUgbmdpbnggbWFpbnRlbmFudAogIC0gZWNobyAiPGgxPkhlbGxvIGZyb20gT0NJITwvaDE+IiA+IC91c3Ivc2hhcmUvbmdpbngvaHRtbC9pbmRleC5odG1sICAjIFBhZ2UgZCdhY2N1ZWlsCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwICAgIyBPdXZyZSBsZSBwb3J0IDgwCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwcyAgIyBPdXZyZSBsZSBwb3J0IDQ0MwogIC0gZmlyZXdhbGwtY21kIC0tcmVsb2FkICAgICAgICAgICAgICAgICAgICAgIyBSZWNoYXJnZSBsZSBmaXJld2FsbAoKIyA1LiBNZXNzYWdlIGRlIGZpbgpmaW5hbF9tZXNzYWdlOiAiSW5zdGFuY2UgY29uZmlndXJhdGlvbiBjb21wbGV0ZSBhZnRlciAkVVBUSU1FIHNlY29uZHMiCg=="
+        }
+      [32m+[0m[0m preserve_boot_volume                = false
+      [32m+[0m[0m private_ip                          = (known after apply)
+      [32m+[0m[0m public_ip                           = (known after apply)
+      [32m+[0m[0m region                              = (known after apply)
+      [32m+[0m[0m shape                               = "VM.Standard.A1.Flex"
+      [32m+[0m[0m state                               = (known after apply)
+      [32m+[0m[0m subnet_id                           = (known after apply)
+      [32m+[0m[0m system_tags                         = (known after apply)
+      [32m+[0m[0m time_created                        = (known after apply)
+      [32m+[0m[0m time_maintenance_reboot_due         = (known after apply)
+
+      [32m+[0m[0m agent_config (known after apply)
+
+      [32m+[0m[0m availability_config (known after apply)
+
+      [32m+[0m[0m create_vnic_details {
+          [32m+[0m[0m assign_ipv6ip          = (known after apply)
+          [32m+[0m[0m assign_public_ip       = "true"
+          [32m+[0m[0m defined_tags           = (known after apply)
+          [32m+[0m[0m display_name           = "WebInstanceVNIC"
+          [32m+[0m[0m freeform_tags          = (known after apply)
+          [32m+[0m[0m hostname_label         = "webinstance"
+          [32m+[0m[0m nsg_ids                = [
+              [32m+[0m[0m "ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra",
+            ]
+          [32m+[0m[0m private_ip             = (known after apply)
+          [32m+[0m[0m skip_source_dest_check = (known after apply)
+          [32m+[0m[0m subnet_id              = "ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq"
+          [32m+[0m[0m vlan_id                = (known after apply)
+
+          [32m+[0m[0m ipv6address_ipv6subnet_cidr_pair_details (known after apply)
+        }
+
+      [32m+[0m[0m instance_options (known after apply)
+
+      [32m+[0m[0m launch_options (known after apply)
+
+      [32m+[0m[0m launch_volume_attachments (known after apply)
+
+      [32m+[0m[0m platform_config (known after apply)
+
+      [32m+[0m[0m preemptible_instance_config (known after apply)
+
+      [32m+[0m[0m shape_config {
+          [32m+[0m[0m baseline_ocpu_utilization     = (known after apply)
+          [32m+[0m[0m gpu_description               = (known after apply)
+          [32m+[0m[0m gpus                          = (known after apply)
+          [32m+[0m[0m local_disk_description        = (known after apply)
+          [32m+[0m[0m local_disks                   = (known after apply)
+          [32m+[0m[0m local_disks_total_size_in_gbs = (known after apply)
+          [32m+[0m[0m max_vnic_attachments          = (known after apply)
+          [32m+[0m[0m memory_in_gbs                 = 12
+          [32m+[0m[0m networking_bandwidth_in_gbps  = (known after apply)
+          [32m+[0m[0m nvmes                         = (known after apply)
+          [32m+[0m[0m ocpus                         = 2
+          [32m+[0m[0m processor_description         = (known after apply)
+          [32m+[0m[0m vcpus                         = (known after apply)
+        }
+
+      [32m+[0m[0m source_details {
+          [32m+[0m[0m boot_volume_size_in_gbs = (known after apply)
+          [32m+[0m[0m boot_volume_vpus_per_gb = (known after apply)
+          [32m+[0m[0m source_id               = "ocid1.image.oc1.eu-paris-1.aaaaaaaahjteglsxr4odpbvt43tbxcd5uajxmkqvx6t4mak2b4p65zsufy6q"
+          [32m+[0m[0m source_type             = "image"
+
+          [32m+[0m[0m instance_source_image_filter_details (known after apply)
+        }
+    }
+
+[1mPlan:[0m [0m1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m instance_id              = (known after apply)
+  [32m+[0m[0m instance_private_ip      = (known after apply)
+  [32m+[0m[0m instance_public_ip       = (known after apply)
+[0m[1mmodule.compute.oci_core_instance.web_instance: Creating...[0m[0m
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1m500-InternalError, Out of host capacity.
+[31m│[0m [0mSuggestion: The service for this resource encountered an error. Please contact support for help with service: Core Instance
+[31m│[0m [0mDocumentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance 
+[31m│[0m [0mAPI Reference: https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Instance/LaunchInstance 
+[31m│[0m [0mRequest Target: POST https://iaas.eu-paris-1.oraclecloud.com/20160918/instances 
+[31m│[0m [0mProvider version: 5.47.0, released on 2024-06-19. This provider is 81 Update(s) behind to current. 
+[31m│[0m [0mService: Core Instance 
+[31m│[0m [0mOperation Name: LaunchInstance 
+[31m│[0m [0mOPC request ID: 28559576856d6771388301c0604d3163/9C931D7A1138E5AFA2E063694344474B/1D63B3028818E71F1E5BE993BC0AD07F 
+[31m│[0m [0m[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with module.compute.oci_core_instance.web_instance,
+[31m│[0m [0m  on compute/instance.tf line 1, in resource "oci_core_instance" "web_instance":
+[31m│[0m [0m   1: resource "oci_core_instance" "web_instance" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
+⚠️  Échec - Retry dans 1 min...
+
+📍 [18:41:49] Tentative 4/100
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1mFailed to load plugin schemas[0m
+[31m│[0m [0m
+[31m│[0m [0m[0mError while loading schemas for plugin components: Failed to obtain
+[31m│[0m [0mprovider schema: Could not load the schema for provider
+[31m│[0m [0mregistry.terraform.io/oracle/oci: failed to retrieve schema from provider
+[31m│[0m [0m"registry.terraform.io/oracle/oci": Plugin did not respond: The plugin
+[31m│[0m [0mencountered an error, and failed to respond to the
+[31m│[0m [0mplugin.(*GRPCProvider).GetProviderSchema call. The plugin logs may contain
+[31m│[0m [0mmore details...
+[31m╵[0m[0m
+⚠️  Échec - Retry dans 1 min...
+
+📍 [18:42:54] Tentative 5/100
+[0m[1mdata.oci_identity_tenancy.current: Reading...[0m[0m
+[0m[1mdata.oci_identity_availability_domains.ads: Reading...[0m[0m
+[0m[1mdata.oci_core_images.oracle_linux: Reading...[0m[0m
+[0m[1mmodule.network.oci_core_virtual_network.main_vcn: Refreshing state... [id=ocid1.vcn.oc1.eu-paris-1.amaaaaaanvgyooiauyd2notpainfyygdm2lapqbgx5t7by2ix2bg4pmtqb2a][0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Reading...[0m[0m
+[0m[1mdata.oci_identity_tenancy.current: Read complete after 1s [id=ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza][0m
+[0m[1mmodule.network.data.oci_core_services.all_services: Read complete after 1s [id=CoreServicesDataSource-0][0m
+[0m[1mdata.oci_identity_availability_domains.ads: Read complete after 1s [id=IdentityAvailabilityDomainsDataSource-3920739484][0m
+[0m[1mdata.oci_core_images.oracle_linux: Read complete after 1s [id=CoreImagesDataSource-1277818673][0m
+[0m[1mmodule.security.oci_core_network_security_group.web_nsg: Refreshing state... [id=ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra][0m
+[0m[1mmodule.network.oci_core_internet_gateway.igw: Refreshing state... [id=ocid1.internetgateway.oc1.eu-paris-1.aaaaaaaaopgtpkxpsfe2czreamj3k3jx2gfzjzckcfuqtd3nk5hlphr5i4ia][0m
+[0m[1mmodule.network.oci_core_nat_gateway.nat_gw: Refreshing state... [id=ocid1.natgateway.oc1.eu-paris-1.aaaaaaaahugtddegj2incyaob2fbnkeoqaafwurotfthfrst3uuhnatwkgpq][0m
+[0m[1mmodule.network.oci_core_service_gateway.service_gw: Refreshing state... [id=ocid1.servicegateway.oc1.eu-paris-1.aaaaaaaahvjyzfll6o7jcpkeipg6xsjg7b53r7a7l5hixnxiebt35eqbmb5a][0m
+[0m[1mmodule.security.oci_core_security_list.public_security_list: Refreshing state... [id=ocid1.securitylist.oc1.eu-paris-1.aaaaaaaap77r5j6hgbr27mcbnkkxu5gckqgtjaj42srepnd7hoesi4ugsrmq][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_egress: Refreshing state... [id=0CD0E8][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_ssh: Refreshing state... [id=177E38][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_https: Refreshing state... [id=52FB8B][0m
+[0m[1mmodule.security.oci_core_network_security_group_security_rule.nsg_rule_http: Refreshing state... [id=69399B][0m
+[0m[1mmodule.network.oci_core_route_table.public_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaaf2uocx5omi4pljtfc4jsvy2rfbjjvkx42ghd5nbmqvnnonuqt5ha][0m
+[0m[1mmodule.network.oci_core_subnet.public_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq][0m
+[0m[1mmodule.network.oci_core_route_table.private_rt: Refreshing state... [id=ocid1.routetable.oc1.eu-paris-1.aaaaaaaalgplclufopjcmy455necasc4zhw3a6pts2vmsfnxrix57pbf55na][0m
+[0m[1mmodule.network.oci_core_subnet.private_subnet: Refreshing state... [id=ocid1.subnet.oc1.eu-paris-1.aaaaaaaaulmr3fns47ngbl6hgxdxf4ixmpfuch2uvtcutp5vwqmomff6fxya][0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create[0m
+
+Terraform will perform the following actions:
+
+[1m  # module.compute.oci_core_instance.web_instance[0m will be created
+[0m  [32m+[0m[0m resource "oci_core_instance" "web_instance" {
+      [32m+[0m[0m availability_domain                 = "uFVI:EU-PARIS-1-AD-1"
+      [32m+[0m[0m boot_volume_id                      = (known after apply)
+      [32m+[0m[0m capacity_reservation_id             = (known after apply)
+      [32m+[0m[0m compartment_id                      = "ocid1.tenancy.oc1..aaaaaaaat7vc3ibdmn7nyu3jy7uawkkcvc7euaexytesvxcq5vnzb4xxenza"
+      [32m+[0m[0m compute_cluster_id                  = (known after apply)
+      [32m+[0m[0m dedicated_vm_host_id                = (known after apply)
+      [32m+[0m[0m defined_tags                        = (known after apply)
+      [32m+[0m[0m display_name                        = "WebInstance"
+      [32m+[0m[0m extended_metadata                   = (known after apply)
+      [32m+[0m[0m fault_domain                        = (known after apply)
+      [32m+[0m[0m freeform_tags                       = (known after apply)
+      [32m+[0m[0m hostname_label                      = (known after apply)
+      [32m+[0m[0m id                                  = (known after apply)
+      [32m+[0m[0m image                               = (known after apply)
+      [32m+[0m[0m instance_configuration_id           = (known after apply)
+      [32m+[0m[0m ipxe_script                         = (known after apply)
+      [32m+[0m[0m is_cross_numa_node                  = (known after apply)
+      [32m+[0m[0m is_pv_encryption_in_transit_enabled = (known after apply)
+      [32m+[0m[0m launch_mode                         = (known after apply)
+      [32m+[0m[0m metadata                            = {
+          [32m+[0m[0m "ssh_authorized_keys" = <<-EOT
+                ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCWEqDLsDwAjJFs0JZbNQO27n+1+WOPaxdjTtmTLCQwVPgi0naPQl4J6hB9lbQBpcYCqKZ0wLBhwYFgpgAUwu35Qp7XSx1wHCCpw7UoJQBP65MPzi3EVnzz21KRa2oNJAT1e3mgPv6kg3+1a84iYKYp0V+1z7GGPQaysXxcRgYB+1T8rxDgfO9MynqKKlZ1/lpgVRSLdmGeq79wKF2ENUadig4LHxSyteXa73JHos+vbnZNh9rfJuVBpIT7z0mKgSuwyUoERCAeoL2HBv1jri7aijbEP15d6ut5X3cM3N5aUYnZL/GT1ynCI7ezd7MiCpeyR49vISyf4QzeiuDN0+7H7HRIXMnj3qL//x4eKRUu0JU/TnBJyqK9oa4h9zBDn8TLdmyCOtBUCbWDcPMBUBz7Y8ewhMHVjW0VpPU2fkcSKIVyTeK52kuK0464DiOE/ZjofCf7g0oE9nEwKY0N5kHT9KbSenhkEBVcBvi98P0iq8y6+12Fud8h2dlIuHDwtG1uLPN9Cb9Aw4wX8qyAEb2BlFdsCJ+kW14ensTwFwe5ULGbpyMRubG505llvkt1ffsBuBNSyRCsNO2WpCn/qaUIrj9FV0+TAhNqXmzmbS+QO5pOAUHM+e3rin5PzxjQVvs5ZYiFh9QpTyFxeutE+1MVCeIZFu6ATvofHTSxkCpOyQ== pc@DESKTOP-87BPDNH
+            EOT
+          [32m+[0m[0m "user_data"           = "I2Nsb3VkLWNvbmZpZwoKIyAxLiBEw6lmaW5pdCBsZSBob3N0bmFtZSBkZSBsYSBtYWNoaW5lCmhvc3RuYW1lOiB3ZWJpbnN0YW5jZQoKIyAyLiBNZXQgw6Agam91ciBsYSBsaXN0ZSBkZXMgcGFja2FnZXMgZXQgZmFpdCBsZXMgbWlzZXMgw6Agam91cgpwYWNrYWdlX3VwZGF0ZTogdHJ1ZQpwYWNrYWdlX3VwZ3JhZGU6IHRydWUKCiMgMy4gSW5zdGFsbGUgYXV0b21hdGlxdWVtZW50IGNlcyBwYWNrYWdlcwpwYWNrYWdlczoKICAtIG5naW54ICAgICAgICMgU2VydmV1ciB3ZWIKICAtIGh0b3AgICAgICAgICMgTW9uaXRvcmluZyBzeXN0w6htZQogIC0gd2dldCAgICAgICAgIyBUw6lsw6ljaGFyZ2VtZW50IGRlIGZpY2hpZXJzCiAgLSBjdXJsICAgICAgICAjIFJlcXXDqnRlcyBIVFRQCgojIDQuIEV4w6ljdXRlIGNlcyBjb21tYW5kZXMgZGFucyBsJ29yZHJlCnJ1bmNtZDoKICAtIHN5c3RlbWN0bCBlbmFibGUgbmdpbnggICAgICAgICAgICAgICAgICAgICMgQWN0aXZlIG5naW54IGF1IGTDqW1hcnJhZ2UKICAtIHN5c3RlbWN0bCBzdGFydCBuZ2lueCAgICAgICAgICAgICAgICAgICAgICMgRMOpbWFycmUgbmdpbnggbWFpbnRlbmFudAogIC0gZWNobyAiPGgxPkhlbGxvIGZyb20gT0NJITwvaDE+IiA+IC91c3Ivc2hhcmUvbmdpbngvaHRtbC9pbmRleC5odG1sICAjIFBhZ2UgZCdhY2N1ZWlsCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwICAgIyBPdXZyZSBsZSBwb3J0IDgwCiAgLSBmaXJld2FsbC1jbWQgLS1wZXJtYW5lbnQgLS1hZGQtc2VydmljZT1odHRwcyAgIyBPdXZyZSBsZSBwb3J0IDQ0MwogIC0gZmlyZXdhbGwtY21kIC0tcmVsb2FkICAgICAgICAgICAgICAgICAgICAgIyBSZWNoYXJnZSBsZSBmaXJld2FsbAoKIyA1LiBNZXNzYWdlIGRlIGZpbgpmaW5hbF9tZXNzYWdlOiAiSW5zdGFuY2UgY29uZmlndXJhdGlvbiBjb21wbGV0ZSBhZnRlciAkVVBUSU1FIHNlY29uZHMiCg=="
+        }
+      [32m+[0m[0m preserve_boot_volume                = false
+      [32m+[0m[0m private_ip                          = (known after apply)
+      [32m+[0m[0m public_ip                           = (known after apply)
+      [32m+[0m[0m region                              = (known after apply)
+      [32m+[0m[0m shape                               = "VM.Standard.A1.Flex"
+      [32m+[0m[0m state                               = (known after apply)
+      [32m+[0m[0m subnet_id                           = (known after apply)
+      [32m+[0m[0m system_tags                         = (known after apply)
+      [32m+[0m[0m time_created                        = (known after apply)
+      [32m+[0m[0m time_maintenance_reboot_due         = (known after apply)
+
+      [32m+[0m[0m agent_config (known after apply)
+
+      [32m+[0m[0m availability_config (known after apply)
+
+      [32m+[0m[0m create_vnic_details {
+          [32m+[0m[0m assign_ipv6ip          = (known after apply)
+          [32m+[0m[0m assign_public_ip       = "true"
+          [32m+[0m[0m defined_tags           = (known after apply)
+          [32m+[0m[0m display_name           = "WebInstanceVNIC"
+          [32m+[0m[0m freeform_tags          = (known after apply)
+          [32m+[0m[0m hostname_label         = "webinstance"
+          [32m+[0m[0m nsg_ids                = [
+              [32m+[0m[0m "ocid1.networksecuritygroup.oc1.eu-paris-1.aaaaaaaalapqrfi2mzohvybkv353jadpxrnjatxk6vqbujgfrx7ery3tdkra",
+            ]
+          [32m+[0m[0m private_ip             = (known after apply)
+          [32m+[0m[0m skip_source_dest_check = (known after apply)
+          [32m+[0m[0m subnet_id              = "ocid1.subnet.oc1.eu-paris-1.aaaaaaaatvqso52wbfwj56x66gbsuh5dijgemwe2vo7e6qlyxdebia6422dq"
+          [32m+[0m[0m vlan_id                = (known after apply)
+
+          [32m+[0m[0m ipv6address_ipv6subnet_cidr_pair_details (known after apply)
+        }
+
+      [32m+[0m[0m instance_options (known after apply)
+
+      [32m+[0m[0m launch_options (known after apply)
+
+      [32m+[0m[0m launch_volume_attachments (known after apply)
+
+      [32m+[0m[0m platform_config (known after apply)
+
+      [32m+[0m[0m preemptible_instance_config (known after apply)
+
+      [32m+[0m[0m shape_config {
+          [32m+[0m[0m baseline_ocpu_utilization     = (known after apply)
+          [32m+[0m[0m gpu_description               = (known after apply)
+          [32m+[0m[0m gpus                          = (known after apply)
+          [32m+[0m[0m local_disk_description        = (known after apply)
+          [32m+[0m[0m local_disks                   = (known after apply)
+          [32m+[0m[0m local_disks_total_size_in_gbs = (known after apply)
+          [32m+[0m[0m max_vnic_attachments          = (known after apply)
+          [32m+[0m[0m memory_in_gbs                 = 12
+          [32m+[0m[0m networking_bandwidth_in_gbps  = (known after apply)
+          [32m+[0m[0m nvmes                         = (known after apply)
+          [32m+[0m[0m ocpus                         = 2
+          [32m+[0m[0m processor_description         = (known after apply)
+          [32m+[0m[0m vcpus                         = (known after apply)
+        }
+
+      [32m+[0m[0m source_details {
+          [32m+[0m[0m boot_volume_size_in_gbs = (known after apply)
+          [32m+[0m[0m boot_volume_vpus_per_gb = (known after apply)
+          [32m+[0m[0m source_id               = "ocid1.image.oc1.eu-paris-1.aaaaaaaahjteglsxr4odpbvt43tbxcd5uajxmkqvx6t4mak2b4p65zsufy6q"
+          [32m+[0m[0m source_type             = "image"
+
+          [32m+[0m[0m instance_source_image_filter_details (known after apply)
+        }
+    }
+
+[1mPlan:[0m [0m1 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  [32m+[0m[0m instance_id              = (known after apply)
+  [32m+[0m[0m instance_private_ip      = (known after apply)
+  [32m+[0m[0m instance_public_ip       = (known after apply)
+[0m[1mmodule.compute.oci_core_instance.web_instance: Creating...[0m[0m
+[31m╷[0m[0m
+[31m│[0m [0m[1m[31mError: [0m[0m[1m500-InternalError, Out of host capacity.
+[31m│[0m [0mSuggestion: The service for this resource encountered an error. Please contact support for help with service: Core Instance
+[31m│[0m [0mDocumentation: https://registry.terraform.io/providers/oracle/oci/latest/docs/resources/core_instance 
+[31m│[0m [0mAPI Reference: https://docs.oracle.com/iaas/api/#/en/iaas/20160918/Instance/LaunchInstance 
+[31m│[0m [0mRequest Target: POST https://iaas.eu-paris-1.oraclecloud.com/20160918/instances 
+[31m│[0m [0mProvider version: 5.47.0, released on 2024-06-19. This provider is 81 Update(s) behind to current. 
+[31m│[0m [0mService: Core Instance 
+[31m│[0m [0mOperation Name: LaunchInstance 
+[31m│[0m [0mOPC request ID: 5f893ceaafea9e0fd7e1d5b96ec5ad8d/D89C5E4DA420909A26E16369434447A4/954214FA61335CA14E44DA53FC422A60 
+[31m│[0m [0m[0m
+[31m│[0m [0m
+[31m│[0m [0m[0m  with module.compute.oci_core_instance.web_instance,
+[31m│[0m [0m  on compute/instance.tf line 1, in resource "oci_core_instance" "web_instance":
+[31m│[0m [0m   1: resource "oci_core_instance" "web_instance" [4m{[0m[0m
+[31m│[0m [0m
+[31m╵[0m[0m
+⚠️  Échec - Retry dans 1 min...
+
